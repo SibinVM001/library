@@ -1,0 +1,46 @@
+[
+    {
+        "id" : 1,
+        "name" : "John",
+        "department" : "B-Tech",
+        "course" : "Electronics & Communication Engineering",
+        "address" : "Lorem Ipsum is simply, dummy text of the printing, and typesetting industry.",
+        "phone" : 9495863355
+    },
+
+    {
+        "id" : 2,
+        "name" : "Maria",
+        "department" : "Diploma",
+        "course" : "Automobile Engineering",
+        "address" : "Lorem Ipsum has been the, industry's standard dummy, text ever since the 1500s",
+        "phone" : 8956123758
+    },
+
+    {
+        "id" : 3,
+        "name" : "Lilly",
+        "department" : "Degree",
+        "course" : "B.Sc Electronics",
+        "address" : "It was popularised in the, 1960s with the release of, Letraset sheets containing.",
+        "phone" : 9587423658
+    },
+
+    {
+        "id" : 4,
+        "name" : "Jack",
+        "department" : "Diploma",
+        "course" : "Civil Engineering",
+        "address" : "Contrary to popular belief, Lorem Ipsum is not simply random text, It has roots in a piece of classical.",
+        "phone" : 8951234579
+    },
+
+    {
+        "id" : 5,
+        "name" : "Arnold",
+        "department" : "B-Tech",
+        "course" : "Electronics & Communication Engineering",
+        "address" : "The standard chunk of Lorem, Ipsum used since the 1500s is, reproduced below for those interested.",
+        "phone" : 7594238975
+    }
+]

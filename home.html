@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library | Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <section class="adminLogin">
+        <div class="container d-flex align-items-center jusify-content-center">
+            <div class="row m-auto">
+                <h3 class="text-center my-5">Welcome To Library</h3>
+                    <div class="row m-4">
+                        <div class="col-5">
+                            <label>Select Student's Department</label>
+                        </div>
+                        <div class="col-2">
+                            :
+                        </div>
+                        <div class="col-5">
+                            <select name="department" id="department" class="department"><option value="">Select Department</option></select>
+                        </div>
+                    </div>
+                    <div class="row m-4">
+                        <div class="col-5">
+                            <label>Select Student's Course</label>
+                        </div>
+                        <div class="col-2">
+                            :
+                        </div>
+                        <div class="col-5">
+                            <select name="course" id="course"><option value="">Select Course</option></select>
+                        </div> 
+                    </div>
+                    <div class="row m-4">
+                        <div class="col-5">
+                            <label>Select Student's Name</label>
+                        </div>
+                        <div class="col-2">
+                            :
+                        </div>
+                        <div class="col-5">
+                            <select name="name" id="name"><option value="">Select Name</option></select>
+                        </div>   
+                    </div>
+                    <div class="row m-4">
+                        <div class="col-5">
+                            <label>Student's Address</label>
+                        </div>
+                        <div class="col-2">
+                            :
+                        </div>
+                        <div class="col-5">
+                            <textarea name="address" id="address" cols="30" rows="4" readonly></textarea><br>
+                            <button id="editAddressBtn" class="btn btn-secondary mt-3">Edit</button>
+                        </div>   
+                    </div>
+                    <div class="row m-4 d-none" id="confirmAddressContainer">
+                        <div class="col-5">
+                            <label>Confirm Student's Address</label>
+                        </div>
+                        <div class="col-2">
+                            :
+                        </div>
+                        <div class="col-5">
+                            <input type="checkbox" style="height: fit-content;" id="confAddress"> <label for="confAddress">Confirm same as above</label><br>
+                            <textarea name="confirmAddress" id="confirmAddress" cols="30" rows="4" class="mt-2"></textarea><br>
+                            <button id="saveAddressBtn" class="btn btn-success mt-3">Save Changes</button>
+                        </div>   
+                    </div>
+                    <div class="row m-4">
+                        <div class="col-5">
+                            <label>Student's Phone Number</label>
+                        </div>
+                        <div class="col-2">
+                            :
+                        </div>
+                        <div class="col-5">
+                            <input type="text" name="phone" id="phone" cols="30" rows="5" readonly maxlength="10">
+                        </div>   
+                    </div>
+                    <div class="row m-4">
+                        <div class="col-5">
+                            <label>Select a Book</label>
+                        </div>
+                        <div class="col-2">
+                            :
+                        </div>
+                        <div class="col-5">
+                            <button id="showBookBtn" class="btn btn-primary">View Books</button>
+                        </div>                   
+                    </div>
+                <div class="row mt-5">
+                    <table class="table" id="assignedDetails">
+                        <tr>
+                            <th>Sl.No</th>
+                            <th>Name</th>
+                            <th>Book Name</th>
+                            <th>Author</th>
+                            <th>Action</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>   
+        </div>
+
+        <!-- show books modal -->
+
+        <div class="modal" tabindex="-1" id="selectBooksModal">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Select a Book</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row mb-3">
+                        <div class="col-3">
+                            <label for="">Select an Author</label>
+                        </div>
+                        <div class="col-2">
+                            :
+                        </div>
+                        <div class="col-7">
+                            <select name="authorName" id="authorName" class="authorName"><option value="">Select an Author</option></select>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                    <div class="col-3">
+                        <label for="">Select a Book Name</label>
+                    </div>
+                    <div class="col-2">
+                        :
+                    </div>
+                    <div class="col-7">
+                        <select name="bookName" id="bookName" class="bookName"><option value="">Select a Book</option></select>
+                    </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary" id="addBookBtn">Add Book</button>
+                  
+                </div>
+                <span class="pb-5" id="bookErrorMsg" style="text-align: center; color: red; font-size: 14px; visibility: hidden;">Error</span>
+              </div>
+            </div>
+        </div>   
+    </section>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

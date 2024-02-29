@@ -1,0 +1,13 @@
+{
+    "Dr. R K Bansal" : ["A Textbook of Fluid Mechanics and Hydraulic Machines"],
+
+    "R S Khurmi & J K Gupta" : ["A Textbook of Machine Design", "Theory of Machines"],
+
+    "Richard Feynman,Robert Leighton & Mathew Sands" : ["The Feynman Lectures on Physics: Mainly Mechanics, Radiation and Heat – Vol. 1", 
+                                                        "The Feynman Lectures on Physics:Volume 2: The New Millennium Edition: Mainly Electromagnetism and Matter",
+                                                        "The Feynman Lectures on Physics – Vol.3"],
+    
+    "David Kleppner & Robert Kolenkow" : ["An Introduction to Mechanics"],
+
+    "Narasimha Siddhanti Malladi" : ["Essential Engineering Mechanics: with Simplified Integrated Methods of Solution"]
+}
